@@ -49,6 +49,7 @@ body .wrapper .form form .error-txt {
   border-radius: 5px;
   margin-bottom: 10px;
   border: 1px solid #f5c6cb;
+  display: none;
 }
 
 body .wrapper .form form .name-details {
@@ -178,6 +179,14 @@ body .wrapper .users .search input {
   border-radius: 5px 0 0 5px;
   padding: 0 13px;
   font-size: 16px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+body .wrapper .users .search input.active {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 body .wrapper .users .search button {
@@ -188,8 +197,18 @@ body .wrapper .users .search button {
   overflow: none;
   cursor: pointer;
   font-size: 17px;
+  color: #333;
+  background: #fff;
+  transition: all .2s ease;
+}
+
+body .wrapper .users .search button.active {
   color: #fff;
-  background: #333;
+  background-color: #333;
+}
+
+body .wrapper .users .search button.active i::before {
+  content: "\f00d";
 }
 
 body .wrapper .users .user-list {

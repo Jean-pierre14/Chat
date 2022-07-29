@@ -39,6 +39,7 @@ body {
                     border-radius: 5px;
                     margin-bottom: 10px;
                     border: 1px solid #f5c6cb;
+                    display: none;
                 }
                 .name-details {
                     display: flex;
@@ -149,6 +150,13 @@ body {
                     border-radius: 5px 0 0 5px;
                     padding: 0 13px;
                     font-size: 16px;
+                    opacity: 0;
+                    pointer-events: none;
+                    transition: all 0.3s ease;
+                    &.active {
+                        opacity: 1;
+                        pointer-events: auto;
+                    }
                 }
                 button {
                     width: 47px;
@@ -158,8 +166,16 @@ body {
                     overflow: none;
                     cursor: pointer;
                     font-size: 17px;
-                    color: #fff;
-                    background: #333;
+                    color: #333;
+                    background: #fff;
+                    transition: all .2s ease;
+                    &.active {
+                        color: #fff;
+                        background-color: #333;
+                        i::before {
+                            content: "\f00d";
+                        }
+                    }
                 }
             }
             .user-list {
