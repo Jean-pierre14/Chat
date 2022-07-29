@@ -74,6 +74,11 @@ body .wrapper .form form .field i {
   transform: translate(-50%);
 }
 
+body .wrapper .form form .field i.active::before {
+  color: #ccc;
+  content: '\f070';
+}
+
 body .wrapper .form form .field label {
   margin: 0 0 2px 0;
 }
