@@ -34,12 +34,13 @@
                 <div class="field input">
                     <label for="ps">Password</label>
                     <input type="password" id="ps" name="ps" placeholder="Password">
+                    <i class="fa fa-eye"></i>
                 </div>
                 <div class="field img">
                     <label for="img">Select Image</label>
                     <input type="file" id="img" name="img">
                 </div>
-                <div class="field input">
+                <div class="field input button">
                     <button type="submit">Create an account</button>
                 </div>
             </form>
@@ -47,5 +48,8 @@
         </section>
     </div>
 </body>
+
+<script src="./assets/js/password_show_hied.js"></script>
+<script src="./assets/js/signup.js"></script>
 
 </html>
