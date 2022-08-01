@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -13,34 +13,29 @@ body {
   min-height: 100vh;
   background-color: #f7f7f7;
 }
-
 body .wrapper {
   background-color: #fff;
   width: 450px;
   border-radius: 16px;
   box-shadow: 0 0 128px rgba(0, 0, 0, 0.1), 0 32px 64px -48px rgba(0, 0, 0, 0.5);
 }
-
 body .wrapper header {
   font-size: 25px;
   font-weight: 600;
   padding-bottom: 10px;
   border-bottom: 1px solid #e6e6e6;
 }
-
 body .wrapper img {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 50%;
 }
-
 body .wrapper .form {
   padding: 25px 30px;
 }
-
 body .wrapper .form form {
   margin: 20px 0;
 }
-
 body .wrapper .form form .error-txt {
   color: #721c24;
   background-color: #f8d7da;
@@ -51,22 +46,18 @@ body .wrapper .form form .error-txt {
   border: 1px solid #f5c6cb;
   display: none;
 }
-
 body .wrapper .form form .name-details {
   display: flex;
 }
-
 body .wrapper .form form .name-details .one {
   margin-right: 10px;
 }
-
 body .wrapper .form form .field {
   position: relative;
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
 }
-
 body .wrapper .form form .field i {
   position: absolute;
   right: 15px;
@@ -74,16 +65,13 @@ body .wrapper .form form .field i {
   top: 50%;
   transform: translate(-50%);
 }
-
 body .wrapper .form form .field i.active::before {
   color: #ccc;
-  content: '\f070';
+  content: "\f070";
 }
-
 body .wrapper .form form .field label {
   margin: 0 0 2px 0;
 }
-
 body .wrapper .form form .field button {
   margin-top: 13px;
   height: 45px;
@@ -95,11 +83,9 @@ body .wrapper .form form .field button {
   background-color: #333;
   color: #fff;
 }
-
 body .wrapper .form form .img {
   font-size: 17px;
 }
-
 body .wrapper .form form .input input {
   outline: none;
   height: 40px;
@@ -109,28 +95,23 @@ body .wrapper .form form .input input {
   border: 1px solid #ccc;
   border-radius: 5px;
 }
-
 body .wrapper .form .link {
   text-align: center;
   margin: 10px 0;
   font-size: 17px;
 }
-
 body .wrapper .form .link a:hover {
   text-decoration: underline;
 }
-
 body .wrapper .users {
   padding: 25px 30px;
 }
-
 body .wrapper .users header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid #e6e6e6;
 }
-
 body .wrapper .users header .logout {
   color: #fff;
   font-size: 17px;
@@ -138,26 +119,21 @@ body .wrapper .users header .logout {
   background-color: #333;
   border-radius: 5px;
 }
-
 body .wrapper .users header .content {
   display: flex;
 }
-
 body .wrapper .users header .content .details {
   font-weight: 200;
   margin-left: 15px;
 }
-
 body .wrapper .users header .content .details span {
   font-size: 15px;
   font-weight: 500;
 }
-
 body .wrapper .users header .content img {
   height: 50px;
   width: 50px;
 }
-
 body .wrapper .users .search {
   position: relative;
   margin: 20px 0;
@@ -165,11 +141,9 @@ body .wrapper .users .search {
   align-items: center;
   justify-content: space-between;
 }
-
 body .wrapper .users .search .text {
   font-size: 18px;
 }
-
 body .wrapper .users .search input {
   position: absolute;
   outline: none;
@@ -183,12 +157,10 @@ body .wrapper .users .search input {
   pointer-events: none;
   transition: all 0.3s ease;
 }
-
 body .wrapper .users .search input.active {
   opacity: 1;
   pointer-events: auto;
 }
-
 body .wrapper .users .search button {
   width: 47px;
   height: 42px;
@@ -199,27 +171,22 @@ body .wrapper .users .search button {
   font-size: 17px;
   color: #333;
   background: #fff;
-  transition: all .2s ease;
+  transition: all 0.2s ease;
 }
-
 body .wrapper .users .search button.active {
   color: #fff;
   background-color: #333;
 }
-
 body .wrapper .users .search button.active i::before {
   content: "\f00d";
 }
-
 body .wrapper .users .user-list {
   max-height: 350px;
   overflow-y: auto;
 }
-
 body .wrapper .users .user-list::-webkit-scrollbar {
   width: 0px;
 }
-
 body .wrapper .users .user-list a {
   display: flex;
   align-items: center;
@@ -231,65 +198,57 @@ body .wrapper .users .user-list a {
   page-break-after: 10px;
   border-bottom-color: #f1f1f1;
 }
-
 body .wrapper .users .user-list a:last-child {
   border: none;
   margin-bottom: 0;
 }
-
 body .wrapper .users .user-list a .content {
   display: flex;
   align-items: center;
   align-content: center;
 }
-
 body .wrapper .users .user-list a .content .detail {
   display: flex;
   flex-direction: column;
   margin-left: 15px;
 }
-
 body .wrapper .users .user-list a .content .detail p {
   color: #67676a;
 }
-
 body .wrapper .users .user-list a img {
   width: 40px;
   height: 40px;
 }
-
 body .wrapper .users .user-list a .status-dot {
   font-size: 12px;
   color: #468669;
 }
-
 body .wrapper .users .user-list a .status-dot.offline {
   font-size: 12px;
   color: #ccc;
 }
-
 body .wrapper .chat-area header {
   display: flex;
   align-items: center;
   padding: 18px 30px;
 }
-
 body .wrapper .chat-area header img {
   width: 45px;
   height: 45px;
   margin: 0 15px;
 }
-
 body .wrapper .chat-area header .back-icon {
   font-size: 18px;
   color: #333;
 }
-
+body .wrapper .chat-area header p,
 body .wrapper .chat-area header span {
-  font-size: 17px;
+  font-size: 12px;
+}
+body .wrapper .chat-area header p {
+  font-size: 15px;
   font-weight: 500;
 }
-
 body .wrapper .chat-area .chat-box {
   height: 500px;
   overflow-y: auto;
@@ -297,64 +256,52 @@ body .wrapper .chat-area .chat-box {
   padding: 10px 30px 20px 30px;
   box-shadow: inset 0 32px 32px -32px rgba(0, 0, 0, 0.074), inset 0 -32px 32px -32px rgba(0, 0, 0, 0.056);
 }
-
 body .wrapper .chat-area .chat-box::-webkit-scrollbar {
   width: 0px;
 }
-
 body .wrapper .chat-area .chat-box .chat {
   margin: 15px 0;
 }
-
 body .wrapper .chat-area .chat-box .chat p {
   word-wrap: break-word;
   padding: 8px 16px;
   box-shadow: 0 0 32px rgba(0, 0, 0, 0.17), 0 16px 16px -16px rgba(0, 0, 0, 0.183);
 }
-
 body .wrapper .chat-area .chat-box .outgoing {
   display: flex;
 }
-
 body .wrapper .chat-area .chat-box .outgoing .details {
   margin-left: auto;
   max-width: calc(100% - 130px);
 }
-
 body .wrapper .chat-area .chat-box .outgoing .details p {
   background-color: #333;
   color: #fff;
   border-radius: 18px 18px 0 18px;
 }
-
 body .wrapper .chat-area .chat-box .incoming {
   display: flex;
   align-items: flex-end;
 }
-
 body .wrapper .chat-area .chat-box .incoming img {
   height: 35px;
   width: 35px;
 }
-
 body .wrapper .chat-area .chat-box .incoming .details {
   margin-left: 10px;
   margin-right: auto;
   max-width: calc(100% - 130px);
 }
-
 body .wrapper .chat-area .chat-box .incoming .details p {
   color: #333;
   background-color: #fff;
   border-radius: 18px 18px 18px 0;
 }
-
 body .wrapper .chat-area .typing-area {
   padding: 18px 30px;
   display: flex;
   justify-content: space-between;
 }
-
 body .wrapper .chat-area .typing-area input {
   height: 45px;
   width: calc(100% - 58px);
@@ -364,7 +311,6 @@ body .wrapper .chat-area .typing-area input {
   padding: 0 13px;
   outline: none;
 }
-
 body .wrapper .chat-area .typing-area button {
   width: 55px;
   border: none;
@@ -373,4 +319,4 @@ body .wrapper .chat-area .typing-area button {
   outline: none;
   background-color: #333;
   color: #fff;
-}
+}/*# sourceMappingURL=style.chat.css.map */

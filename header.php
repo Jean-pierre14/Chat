@@ -1,4 +1,11 @@
 <?php session_start();?>
+
+<?php
+    if(!isset($_SESSION['unique_id'])){
+        header("location: ./login.php");
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

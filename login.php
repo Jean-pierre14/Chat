@@ -11,13 +11,14 @@
                     <label for="em">Email</label>
                     <input type="email" id="em" name="em" placeholder="Email@racine24.com">
                 </div>
+
                 <div class="field input">
                     <label for="ps">Password</label>
                     <input type="password" id="ps" name="ps" placeholder="Password">
                     <i class="fa fa-eye"></i>
                 </div>
 
-                <div class="field input">
+                <div class="field input button">
                     <button type="submit">Log In</button>
                 </div>
             </form>
@@ -26,6 +27,7 @@
     </div>
     
     <script src="./assets/js/password_show_hied.js"></script>
+    <script src="./assets/js/login.js"></script>
 </body>
 
 </html>

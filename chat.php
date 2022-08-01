@@ -1,27 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Racine14 | chat</title>
-    <link rel="stylesheet" href="./assets/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <link rel="stylesheet" href="./assets/css/style.chat.css">
-</head>
+<?php include_once "./header.php";?>
 
 <body>
     <div class="wrapper">
+        <?php
+            include_once "./backend/config.php";
+            $user_id = mysqli_real_escape_string($con, $_GET['user_id']);
+
+            $sql = mysqli_query($con, "SELECT * FROM users WHERE unique_id = {$user_id}");
+            $row = mysqli_fetch_assoc($sql);
+        ?>
         <section class="chat-area">
             <header>
-                <a href="#" class="back-icon"><i class="fas fa-arrow-left"></i></a>
-                <img src="./assets/img/racine14.jpg" alt="Profile-User">
+                <a href="users.php" class="back-icon"><i class="fas fa-arrow-left"></i></a>
+                <img src="./assets/img/<?= $row['img'];?>" alt="Profile-User">
                 <div class="details">
-                    <span>Racine14</span>
-                    <p>
-                        Active now
-                    </p>
+                    <p><?= $row['fname'] . ' ' . $row['lname'];?></p>
+                    <span>
+                        <?= $row['status'];?>
+                    </span>
                 </div>
             </header>
             <div class="chat-box">
@@ -64,9 +60,17 @@
                     </div>
                 </div>
             </div>
-            <form action="#" class="typing-area">
-                <input type="text" placeholder="Type a message here...">
-                <button><i class="fab fa-telegram-plane"></i></button>
+            <form action="#" method="post" class="typing-area">
+                
+                <input type="text" class="searchText" name="outgoing_id" hidden value="<?= $_SESSION['unique_id'];?>" />
+                
+                <input type="text" class="searchText" name="incoming_id" hidden value="<?= $user_id;?>"/>
+                
+                <input type="text" name="message" class="input-field" autofocus placeholder="Type a message here..."/>
+                
+                <button type="button">
+                    <i class="fab fa-telegram-plane"></i>
+                </button>
             </form>
         </section>
     </div>
