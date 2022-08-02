@@ -32,25 +32,12 @@
                     <img src="./assets/img/racine14.jpg" alt="Profil-userName">
                     <div class="details">
                         <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit, sequi repudiandae voluptatibus laboriosam tempore incidunt dolores alias aut. Eligendi ducimus repudiandae assumenda officia, dolorem voluptatem! Debitis officiis expedita eos sed.
+                            Hello
                         </p>
                     </div>
                 </div>
-                <div class="chat incoming">
-                    <img src="./assets/img/racine14.jpg" alt="Profil-userName">
-                    <div class="details">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        </p>
-                    </div>
-                </div>
-                <div class="chat outgoing">
-                    <div class="details">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        </p>
-                    </div>
-                </div>
+                
+                
                 <div class="chat incoming">
                     <img src="./assets/img/racine14.jpg" alt="Profil-userName">
                     <div class="details">
