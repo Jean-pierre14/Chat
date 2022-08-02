@@ -75,5 +75,6 @@
         </section>
     </div>
 </body>
+    <script src="./assets/js/chat.js"></script>
 
 </html>
