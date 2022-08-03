@@ -13,10 +13,12 @@
             $pass = md5($password);
             $sql = mysqli_query($con, "SELECT * FROM users WHERE email = '{$em}' AND `password` = '{$pass}'");
             $row = mysqli_fetch_assoc($sql);
-            
+
             if($sql){
+
                 $sql2 = mysqli_query($con, "UPDATE users SET `status` = 'Active now' WHERE unique_id = {$row['unique_id']}");
-                if($sql2){
+
+                if($sql2) {
                     
                     session_start();
 
@@ -27,7 +29,7 @@
                     print "success";
 
                 }else{
-                    print "Something went wrong Sql";
+                    print "Something went wrong Sql ". $row['unique_id'];
                 }
             }else{
                 print "Something went wrong";
