@@ -7,24 +7,30 @@
     if(empty($em)){
         print "Email is required";
     }else{
+
         if(empty($password)){
             print "Password is required :(";
         }else{
             $pass = md5($password);
+            
             $sql = mysqli_query($con, "SELECT * FROM users WHERE email = '{$em}' AND `password` = '{$pass}'");
-            $row = mysqli_fetch_assoc($sql);
+            
 
             if($sql){
 
-                $sql2 = mysqli_query($con, "UPDATE users SET `status` = 'Active now' WHERE unique_id = {$row['unique_id']}");
+                session_start();
+
+                $row = mysqli_fetch_assoc($sql);
+                    
+                $_SESSION['unique_id'] = $row['unique_id'];
+
+                $status = 'Active now';
+
+                $sql2 = mysqli_query($con, "UPDATE users SET `status` = '{$status}' WHERE unique_id = {$row['unique_id']}");
 
                 if($sql2) {
                     
-                    session_start();
-
-                    $row = mysqli_fetch_assoc($sql);
                     
-                    $_SESSION['unique_id'] = $row['unique_id'];
                     
                     print "success";
 
