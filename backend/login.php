@@ -12,8 +12,10 @@
         }else{
             $pass = md5($password);
             $sql = mysqli_query($con, "SELECT * FROM users WHERE email = '{$em}' AND `password` = '{$pass}'");
+            $row = mysqli_fetch_assoc($sql);
+            
             if($sql){
-                $sql2 = mysqli_query($con, "UPDATE user SET `status` = 'Active now'");
+                $sql2 = mysqli_query($con, "UPDATE users SET `status` = 'Active now' WHERE unique_id = {$row['unique_id']}");
                 if($sql2){
                     
                     session_start();
@@ -23,8 +25,9 @@
                     $_SESSION['unique_id'] = $row['unique_id'];
                     
                     print "success";
+
                 }else{
-                    print "Something went wrong";
+                    print "Something went wrong Sql";
                 }
             }else{
                 print "Something went wrong";

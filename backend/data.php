@@ -13,7 +13,7 @@
 
         @($outgoing_id == $row2['outgoing_msg_id']) ? $you = "You: " : $you = "";
 
-        ($row['status'] == 'Offline now') ? $offline = "offline" : $offline = "";
+        ($row['status'] == "Offline now") ? $offline = "offline" : $offline = "";
         
         $output .= '
         <a href="chat.php?user_id='.$row['unique_id'].'">
