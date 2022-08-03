@@ -30,12 +30,12 @@
 
                 if($sql2) {
                     
-                    
-                    
                     print "success";
 
                 }else{
+
                     print "Something went wrong Sql ". $row['unique_id'];
+                
                 }
             }else{
                 print "Something went wrong";
