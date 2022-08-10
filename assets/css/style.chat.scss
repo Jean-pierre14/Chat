@@ -6,6 +6,17 @@
     font-family: 'Poppins', sans-serif;
 }
 
+.error-txt {
+    color: #721c24;
+    background-color: #f8d7da;
+    padding: 8px 10px;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #f5c6cb;
+    display: none;
+}
+
 body {
     display: flex;
     align-items: center;

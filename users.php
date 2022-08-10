@@ -1,9 +1,11 @@
 <?php include_once "./header.php";?>
 
+
 <body>
     <div class="wrapper">
         <section class="users">
             <?php
+                session_start();
                 include_once "./backend/config.php";
                 $uniqueId = $_SESSION['unique_id'];
                 $sql = mysqli_query($con, "SELECT * FROM users WHERE unique_id = {$uniqueId}");
